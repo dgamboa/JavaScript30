@@ -107,6 +107,9 @@
 
     //>>>>> Playing with this last iteration on the console, we can see that if we change age, only the object we changed changes. But if we change something inside social, they will both change. I'm not sure exactly why yet but I suspect it's because the social reference is an object itself that both variables are referencing (i.e. you would have to make a nested copy of the social object).
 
+    // Poor man's deep clone:
+    const dev2 = JSON.parse(JSON.stringify(dan));
+
   </script>
 
 </body>
