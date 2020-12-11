@@ -84,15 +84,32 @@ h2 {
   opacity: 0.5;
 }
 
-button.clear-items {
+div.clear-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button#clear-checks {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-top: 35px;
   background-color: rgb(244, 226, 194);
-  width: 100px;
+  width: 40%;
 }
 
-button.clear-items:hover {
+button#clear-checks:hover {
+  opacity: 0.5;
+}
+
+button#clear-list {
+  padding: 10px;
+  outline: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 130, 120);
+  width: 40%;
+}
+
+button#clear-list:hover {
   opacity: 0.5;
 }
