@@ -42,6 +42,28 @@
 
 <button></button>
 <script>
+  const divs = document.querySelectorAll('div');
+  const button = document.querySelector('button');
+
+  function logText(e) {
+    console.log(this.classList.value);
+    e.stopPropagation(); // stop bubbling up or capturing down!
+  }
+
+  divs.forEach(div => div.addEventListener('click', logText, {
+    // true captures from parent to child;
+    // false is default and bubbles from child to parent
+    capture: false, 
+    // once: false is default behavior
+    once: false
+  }));
+
+  button.addEventListener('click', () => {
+    console.log('Click!!!');
+  }, {
+    // once: true means that it listens for the event once and then unbinds itself
+    once: true
+  });
 
 </script>
 </body>
